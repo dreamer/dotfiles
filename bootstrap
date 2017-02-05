@@ -6,6 +6,8 @@ install_rpmfusion
 install_packages my-fedora-rpms
 install_vimrc
 
+force_link_file	$(pwd)/dotfiles/bashrc		~/.bashrc
+force_link_file	$(pwd)/dotfiles/bash_profile	~/.bash_profile
 link_file	$(pwd)/dotfiles/terminator	~/.config/terminator/config
 link_file	$(pwd)/dotfiles/gvimrc		~/.gvimrc
 link_file	$(pwd)/dotfiles/gitignore	~/.gitignore

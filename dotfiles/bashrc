@@ -1,0 +1,42 @@
+# .bashrc
+# this file is for aliases and functions
+
+# my beloved locale settings
+export LANG="en_GB.utf8"
+export LC_MONETARY="pl_PL.utf8"
+export LC_PAPER="pl_PL.utf8"
+export LC_NAME="pl_PL.utf8"
+export LC_ADDRESS="pl_PL.utf8"
+export LC_TELEPHONE="pl_PL.utf8"
+export LC_MEASUREMENT="pl_PL.utf8"
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+# Uncomment the following line if you don't like systemctl's auto-paging feature:
+# export SYSTEMD_PAGER=
+
+# == user specific aliases and functions ==================
+
+alias grep="grep --color"
+alias egrep="egrep --color"
+export PATH=$PATH:~/bin
+export SVN_EDITOR=gvim
+
+# == stuff that came from Arch ============================
+
+alias ls='ls --color=always'
+PS1='[\u@\h \W]\$ '
+
+# == Fedora has this by default, yet noone else do ========
+alias cd..='cd ..'
+alias ll='ls -l'
+alias la='ls -A'
+alias ssh='ssh -X'
+alias yum='dnf'
+alias vim='gvim -v' # normal vim does not have X clipboard support enabled
+alias ocaml='rlwrap ocaml' # stupid ocaml
+alias workspace='cd ~/src/opsw/bts-sc-mcuhwapi'
+alias ps='ps --forest'
