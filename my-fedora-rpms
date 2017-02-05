@@ -3,7 +3,7 @@
 #
 # nice icons: http://mokaproject.com/faba-icon-theme/
 # faba, moka
-#
+ 
 kernel-devel
 usbmon
 
@@ -24,10 +24,6 @@ youtube-dl
 brasero
 htop
 gnuplot
-
-# package names not synchronized between debian and fedora below:
-
-#
 units
 indent
 telnet
@@ -39,20 +35,19 @@ man-pages
 alacarte
 epiphany
 gnome-subtitles
-# gnome-do	# maybe +some plugins?
 empathy
 terminator
 gnome-terminal-nautilus
 comix
-kodi # formerly xbmc        # fuck, yeah!
+kodi # formerly xbmc
 unrar
 xchat
 dosbox
 wine
-# opera		# of course # not in std repos yet
+winetricks
 # fusion-icon
 gconf-editor
-# synergy-plus	# meh, there are better replacements
+# synergy-plus # meh, there are better replacements
 inkscape
 gimp
 vlc
@@ -80,8 +75,9 @@ texinfo
 xdotool
 clementine
 #pdftk
-#ppl-swiprolog hmm, borked
+ppl-swiprolog # used to be borked, now works again
 gnome-boxes
+transmission
 
 gstreamer-plugins-good
 gstreamer-plugins-good-extras
@@ -95,18 +91,14 @@ gstreamer1-libav
 
 # useful stuff
 
-lshw			# list hardware
-mediawriter # formerly liveusb-creator	# just what you think :)
-
-# especially for Asus Eee PC 1215n
-#broadcom-wl
+lshw # list hardware
+mediawriter # formerly liveusb-creator
 
 # useful for development:
 
 cscope
 ocaml
 rlwrap
-
 mercurial
 hgview
 cvs
@@ -114,6 +106,7 @@ subversion
 nemiver
 scons
 connect-proxy
+fpc # Free Pascal, oh how I love thee
 
 # packaging
 rpm-build
@@ -142,14 +135,12 @@ protobuf-lite-static
 protobuf-lite-devel
 protobuf-vim
 
-# fuse-utils # not available?
 fuse-encfs
 
-# pretty, pretty linux
-
+# pretty, pretty
 # gtk-murrine-engine	# otherwise cool skins won't work well
 # gtk-aurora-engine	# is it in repo yet?
-#faenza-icon-theme
+# faenza-icon-theme
 
 # fonts
 freetype-freeworld
@@ -162,14 +153,13 @@ texlive-polski
 
 hplip-gui
 
-fpc # Free Pascal, yeah!
 
-# I am not sure any more, seems like official dropbox installation is missing
-# something...
-#nautilus-dropbox
+# I am not sure any more, seems like official dropbox installation is
+# missing something...
+# dropbox
+# nautilus-dropbox
 
 # you can try http://corefonts.sourceforge.net/ but 
-# $ wget http://kegel.com/wine/winetricks
 # $ sh winetricks corefonts
 # works probably better
 
