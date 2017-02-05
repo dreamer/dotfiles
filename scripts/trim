@@ -1,0 +1,11 @@
+#!/bin/env python3
+
+import sys
+
+fin = open(sys.argv[1], "r")
+stripped_lines = [ l.rstrip() + '\n' for l in fin ]
+fin.close()
+
+fout = open(sys.argv[1], "w")
+fout.writelines(stripped_lines)
+fout.close()

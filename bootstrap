@@ -1,8 +1,6 @@
 #!/bin/bash
 
-for p in plugins/*.bash ; do
-	source $p
-done
+for p in plugins/*.bash ; do source $p ; done
 
 install_rpmfusion
 install_packages my-fedora-rpms
@@ -11,6 +9,10 @@ install_vimrc
 link_file	$(pwd)/dotfiles/terminator	~/.config/terminator/config
 link_file	$(pwd)/dotfiles/gvimrc		~/.gvimrc
 link_file	$(pwd)/dotfiles/gitignore	~/.gitignore
+
+for s in scripts/* ; do
+	link_file	$(pwd)/$s		~/bin/$(basename $s)
+done
 
 link_dropbox	~/Dropbox/Documents		~/Documents
 link_dropbox	~/Dropbox/Pictures		~/Pictures

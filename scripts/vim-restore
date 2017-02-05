@@ -1,0 +1,16 @@
+#!/bin/env bash
+
+if [ ! -d .git ]; then
+	vim $@
+	return $?
+fi
+
+find_me_some_files ()
+{
+	git log -1 --oneline --name-status | tail -n +2 | \
+	while read status file; do
+		echo $file
+	done
+}
+
+vim $@ -p $(find_me_some_files)

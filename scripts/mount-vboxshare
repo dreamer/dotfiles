@@ -1,0 +1,3 @@
+#!/bin/sh
+set -v
+sudo mount -t vboxsf shared /mnt/hgfs/shared

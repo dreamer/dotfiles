@@ -1,0 +1,60 @@
+#!/usr/bin/python
+"""
+----------------------------------------------------------------------------
+THE BEER-WARE LICENSE" (Revision 42):
+dreamer_ <dreamer.tan@gmail.com> wrote this file. As long as you retain this
+notice you can do whatever you want with this stuff. If we meet some day, and
+you think this stuff is worth it, you can buy me a beer in return.
+--
+Patryk 'dreamer_' Obara
+----------------------------------------------------------------------------
+"""
+from optparse import OptionParser
+
+lorem = """Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Vivamus mi odio, varius sit amet, cursus et, facilisis at, risus. Aenean at enim eget magna iaculis ornare. Curabitur tincidunt quam. Suspendisse aliquam, magna elementum facilisis pellentesque, metus leo mattis eros, et ullamcorper diam diam id augue. Pellentesque velit lacus, tincidunt id, consequat vitae, viverra sit amet, diam. Duis ut nibh non mi suscipit lobortis. Vivamus ut dolor. Nam quam turpis, vulputate eu, posuere nec, commodo eget, tortor. Phasellus bibendum sapien sit amet dolor. Pellentesque purus lorem, laoreet ut, ultrices id, cursus sit amet, felis. Praesent sit amet tortor non ipsum dignissim adipiscing.
+Etiam a tellus ac libero sodales suscipit. Donec ullamcorper dapibus odio. Vivamus vehicula mi. Integer tempor dui eu felis. Integer pharetra mi consequat nisi. Donec vel risus. Nunc dignissim nisi sit amet odio. Phasellus semper auctor purus. Praesent tempus mollis lectus. Proin ac felis eu lectus sodales convallis. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis turpis odio, sagittis a, sollicitudin ut, sodales vitae, orci.
+Suspendisse potenti. Praesent egestas. Sed felis magna, commodo id, pretium vitae, consectetuer vel, tortor. Curabitur laoreet aliquam turpis. Nulla turpis velit, hendrerit non, nonummy in, tempus viverra, dui. Vestibulum eu quam tempus ante sodales dictum. Morbi et pede et augue interdum fringilla. In dolor. Ut pulvinar ornare elit. Aliquam at nulla non urna elementum rutrum. Sed leo nulla, faucibus ac, nonummy in, commodo quis, tortor. Nulla sem. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse posuere urna quis libero. Nullam interdum, ipsum eget convallis suscipit, odio nisi ultricies metus, sed posuere sapien pede dignissim nisi.
+Nunc nec velit. Aliquam erat volutpat. Aenean arcu felis, eleifend a, laoreet eget, ornare vel, libero. Morbi aliquet. Fusce lobortis ornare orci. Praesent tristique mollis elit. Fusce bibendum, leo quis sagittis interdum, nisi eros auctor mi, et pellentesque ante sapien at leo. Proin odio neque, ultricies ut, tincidunt at, laoreet quis, enim. Nunc tristique dui non leo. Maecenas rutrum eros nec nisl. Nulla facilisi. Cras pellentesque tortor quis sapien. Praesent sollicitudin, tellus in malesuada porta, enim ante tristique massa, nec accumsan tortor urna vel nibh. Duis tincidunt rhoncus leo. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Cras viverra.
+Sed libero. Mauris eros lorem, tincidunt id, aliquet sed, egestas in, magna. Donec imperdiet blandit urna. Mauris quis dui. Fusce consequat neque. Nunc sit amet arcu. Donec ultricies laoreet mauris. Vivamus enim neque, gravida laoreet, tristique ornare, malesuada id, mauris. Praesent commodo, diam non feugiat egestas, est massa aliquam nisi, in pellentesque enim libero non lorem. Sed ipsum dolor, mollis sed, accumsan porttitor, venenatis at, neque. Suspendisse dui nisi, condimentum quis, mattis at, sodales pharetra, lectus.
+Pellentesque in velit. Aliquam ullamcorper ligula nec pede. Ut viverra. Etiam pellentesque eros ac eros. Donec fermentum sem sed felis aliquet feugiat. Quisque dapibus. Phasellus leo. Nam fermentum aliquet nisi. In ullamcorper enim non urna. Nulla ac odio.
+Praesent commodo diam sed nunc. Aenean mattis nibh ac est ultrices commodo. Integer vel felis imperdiet massa iaculis dignissim. Donec dictum mauris et arcu. Pellentesque posuere mauris. Nunc felis elit, cursus eget, congue ut, feugiat in, eros. Vestibulum turpis eros, volutpat id, condimentum et, consectetuer nec, nisi. Nam suscipit euismod diam. Quisque placerat ligula eu neque. Aliquam erat volutpat. Maecenas rhoncus. Donec id quam vel eros feugiat lacinia. Praesent non augue ultrices eros interdum porttitor. Maecenas lacus magna, mattis ac, iaculis a, nonummy vitae, justo. Curabitur ac enim vitae tortor vestibulum tristique. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam lobortis aliquet urna. In sodales. Vivamus risus nibh, tempus sed, cursus nonummy, laoreet vitae, dolor. Aliquam lobortis est sit amet nunc. Sed dignissim elit et pede. Phasellus est massa, sollicitudin vel, commodo sit amet, egestas vel, metus. Nam eget mi. Suspendisse potenti. In sapien est, feugiat quis, egestas vitae, fringilla a, lectus. Mauris cursus augue a leo.
+Nunc ac nisl ut sapien placerat nonummy. Praesent at est. Pellentesque mattis. Mauris massa. Vivamus quam. Proin volutpat. Mauris vestibulum nisl ac libero. Integer sagittis turpis sed lacus. Mauris molestie sem eget est. Morbi justo. Morbi nunc massa, consectetuer sit amet, consequat at, tempor sed, lacus.
+Praesent iaculis elit in metus. Vestibulum accumsan. Suspendisse tortor. Integer vestibulum tristique odio. Praesent in ligula ut risus rutrum dignissim. Nulla a sem in libero bibendum volutpat. Integer vitae est quis dui pretium blandit. Fusce interdum volutpat nisi. Ut eget justo eget elit condimentum sagittis. Duis in odio.
+"""
+paragraphs = lorem.split('\n')
+
+def const_width(line):
+	if not line: return ''
+	head, tail = line[:80], line[80:]
+	return head+'\n'+const_width(tail)
+
+def main():
+    parser = OptionParser()
+    parser.add_option("-c", "--const-width", dest="const_width",
+        action="store_true", default=False, 
+        help="set constant line width; paragraphs will be displayed in 80 columns")
+    parser.add_option("-n", "--paragraphs", dest="no_paragraphs",
+        default=1,
+		help="set number of paragraphs to be printed; default: 1")
+    parser.add_option("-x", "--to-clipboard", dest="clipboard",
+		action="store_true", default=False,
+		help="copy generated Lorem Ipsum text to clipboard instead of printing it")
+    (options, args) = parser.parse_args()
+    global paragraphs
+    paragraphs = paragraphs[:int(options.no_paragraphs)]
+    lipsum_text = ''
+    if options.const_width:
+        lipsum_text = '\n'.join( [const_width(p) for p in paragraphs] )
+    else:
+        lipsum_text = '\n'.join( paragraphs )
+    if not options.clipboard:
+        print lipsum_text,   
+    else:
+        # this works, but needs pygtk package
+        import gtk
+        clipboard = gtk.Clipboard()
+        clipboard.set_text(lipsum_text)
+        clipboard.store()
+
+if __name__ == "__main__": main()

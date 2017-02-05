@@ -1,0 +1,2 @@
+#!/bin/sh
+xev -id $(xwininfo | grep "Window id" | cut -f 4 -d' ')

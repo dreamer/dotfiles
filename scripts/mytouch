@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Works just like touch, but uses first template found in Templates to fill
+# file content.
+#
+# Can be improved, obviously...
+# TODO:
+# - use proper xdg dir instead of template
+# - implement/forward usual touch params?
+# - invent some way for template selection in case many templates have same
+#   extension?
+
+file=$1
+ext=${file##*.}
+
+for t in ~/Templates/*.$ext ; do
+	cp -i $t $file 2> /dev/null || touch $file
+	break
+done
