@@ -16,6 +16,7 @@ levien-inconsolata-fonts
 meld
 vim-X11 # aka gvim
 vim-enhanced # why not simply vim?!
+# powerline # mispackaged, let's use through Vundle for now
 git
 gitk
 eog
@@ -77,7 +78,7 @@ clementine
 #pdftk
 ppl-swiprolog # used to be borked, now works again
 gnome-boxes
-transmission
+transmission-gtk
 
 gstreamer-plugins-good
 gstreamer-plugins-good-extras
