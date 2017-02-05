@@ -1,6 +1,9 @@
 #!/bin/bash
 
 source plugins/dropbox.bash
+source plugins/rpmfusion.bash
+
+install_rpmfusion
 
 link_dropbox	~/Dropbox/Documents		~/Documents
 link_dropbox	~/Dropbox/Pictures		~/Pictures
