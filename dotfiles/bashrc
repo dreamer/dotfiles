@@ -22,8 +22,7 @@ fi
 
 alias grep="grep --color"
 alias egrep="egrep --color"
-export PATH=$PATH:~/bin
-export SVN_EDITOR=gvim
+export SVN_EDITOR=vim
 
 # == stuff that came from Arch ============================
 
@@ -38,5 +37,4 @@ alias ssh='ssh -X'
 alias yum='dnf'
 alias vim='gvim -v' # normal vim does not have X clipboard support enabled
 alias ocaml='rlwrap ocaml' # stupid ocaml
-alias workspace='cd ~/src/opsw/bts-sc-mcuhwapi'
 alias ps='ps --forest'
