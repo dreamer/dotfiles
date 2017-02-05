@@ -1,0 +1,181 @@
+# this is list of packages that are rarely installed
+# by default
+#
+# nice icons: http://mokaproject.com/faba-icon-theme/
+# faba, moka
+#
+kernel-devel
+usbmon
+
+hdparm
+irssi
+icu # unicode tools
+terminus-fonts
+terminus-fonts-console
+levien-inconsolata-fonts
+meld
+vim-X11 # aka gvim
+vim-enhanced # why not simply vim?!
+git
+gitk
+eog
+youtube-dl
+#gnome-shell-extension-weather
+brasero
+htop
+gnuplot
+
+# package names not synchronized between debian and fedora below:
+
+#
+units
+indent
+telnet
+python2-matplotlib
+figlet
+pv              # progress bar for pipes, yay!
+mailx
+man-pages
+alacarte
+epiphany
+gnome-subtitles
+# gnome-do	# maybe +some plugins?
+empathy
+terminator
+gnome-terminal-nautilus
+comix
+kodi # formerly xbmc        # fuck, yeah!
+unrar
+xchat
+dosbox
+wine
+# opera		# of course # not in std repos yet
+# fusion-icon
+gconf-editor
+# synergy-plus	# meh, there are better replacements
+inkscape
+gimp
+vlc
+rdesktop
+gcc-c++
+bash-completion
+screen
+#thewidgetfactory
+scrot
+hunspell-pl
+hunspell-fr
+gnome-tweak-tool
+libreoffice-writer
+libreoffice-calc
+gparted
+wget
+p7zip
+xorg-x11-apps # xkill!
+binutils
+autoconf
+automake
+cmake
+texlive-latex
+texinfo
+xdotool
+clementine
+#pdftk
+#ppl-swiprolog hmm, borked
+gnome-boxes
+
+gstreamer-plugins-good
+gstreamer-plugins-good-extras
+gstreamer-plugins-bad
+gstreamer-plugins-bad-free
+gstreamer-plugins-bad-nonfree
+gstreamer-plugins-ugly
+gstreamer-ffmpeg
+# gstreamer maintainers are insane...
+gstreamer1-libav
+
+# useful stuff
+
+lshw			# list hardware
+mediawriter # formerly liveusb-creator	# just what you think :)
+
+# especially for Asus Eee PC 1215n
+#broadcom-wl
+
+# useful for development:
+
+cscope
+ocaml
+rlwrap
+
+mercurial
+hgview
+cvs
+subversion
+nemiver
+scons
+connect-proxy
+
+# packaging
+rpm-build
+rpmdevtools
+rpmrebuild
+rpmlint
+fedpkg
+
+# devel packages
+boost-devel
+SDL-devel
+SDL_image-devel
+SDL_mixer-devel
+SDL_net-devel
+SDL_ttf-devel
+gettext
+zlib
+lua
+python2-django
+protobuf
+protobuf-static
+protobuf-devel
+protobuf-compiler
+protobuf-lite
+protobuf-lite-static
+protobuf-lite-devel
+protobuf-vim
+
+# fuse-utils # not available?
+fuse-encfs
+
+# pretty, pretty linux
+
+# gtk-murrine-engine	# otherwise cool skins won't work well
+# gtk-aurora-engine	# is it in repo yet?
+#faenza-icon-theme
+
+# fonts
+freetype-freeworld
+
+# latex
+texlive
+texlive-ttfutils
+texlive-mwcls
+texlive-polski
+
+hplip-gui
+
+fpc # Free Pascal, yeah!
+
+# I am not sure any more, seems like official dropbox installation is missing
+# something...
+#nautilus-dropbox
+
+# you can try http://corefonts.sourceforge.net/ but 
+# $ wget http://kegel.com/wine/winetricks
+# $ sh winetricks corefonts
+# works probably better
+
+# fedora specific notes:
+#
+# if you install (and enable) rpmfusion repositories
+# then importing your Music in rhythmbox will result
+# in automatic detection of all required codec packs
+#

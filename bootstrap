@@ -1,9 +1,11 @@
 #!/bin/bash
 
-source plugins/dropbox.bash
-source plugins/rpmfusion.bash
+for p in plugins/*.bash ; do
+	source $p
+done
 
 install_rpmfusion
+install_packages my-fedora-rpms
 
 link_dropbox	~/Dropbox/Documents		~/Documents
 link_dropbox	~/Dropbox/Pictures		~/Pictures
