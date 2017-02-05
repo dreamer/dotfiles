@@ -1,0 +1,38 @@
+" get rid of bells and visualbells!
+set vb t_vb= 
+
+
+" so cool…
+" colorscheme murphy
+colorscheme mustang2
+
+
+" neat font
+set guifont=inconsolata\ 11
+"set gfn=Terminus
+set guifontwide=ttf-arphic-uming
+
+
+" remove toolbar
+set guioptions-=T
+set guioptions-=m
+
+
+" Maximize gvim window.
+" avoid this, it works awful...
+"set columns=256
+"set lines=120
+
+
+" mark lines with more than 80 columns
+"highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+"match OverLength /\%81v.\+/
+
+" mark trailing whitespace
+"highlight ExtraWhitespace ctermbg=darkred guibg=darkred
+"match ExtraWhitespace /\s\+$/
+
+"highlight ColorColumn guibg=#303030
+
+"set undofile
+"set undodir=~/undodir

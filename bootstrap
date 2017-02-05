@@ -9,6 +9,8 @@ install_packages my-fedora-rpms
 install_vimrc
 
 link_file	$(pwd)/dotfiles/terminator	~/.config/terminator/config
+link_file	$(pwd)/dotfiles/gvimrc		~/.gvimrc
+link_file	$(pwd)/dotfiles/gitignore	~/.gitignore
 
 link_dropbox	~/Dropbox/Documents		~/Documents
 link_dropbox	~/Dropbox/Pictures		~/Pictures
