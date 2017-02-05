@@ -142,6 +142,7 @@ fuse-encfs
 # gtk-murrine-engine	# otherwise cool skins won't work well
 # gtk-aurora-engine	# is it in repo yet?
 # faenza-icon-theme
+arc-theme # in repos since F25, hurray!
 
 # fonts
 freetype-freeworld
