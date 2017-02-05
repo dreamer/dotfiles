@@ -8,6 +8,8 @@ install_rpmfusion
 install_packages my-fedora-rpms
 install_vimrc
 
+link_file	$(pwd)/dotfiles/terminator	~/.config/terminator/config
+
 link_dropbox	~/Dropbox/Documents		~/Documents
 link_dropbox	~/Dropbox/Pictures		~/Pictures
 link_dropbox	~/Dropbox/Public		~/Public
