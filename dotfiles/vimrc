@@ -1,4 +1,4 @@
-" == Vundle configuration ==
+" == Vundle configuration ============================================
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -13,6 +13,7 @@ Plugin 'VundleVim/Vundle.vim' " let Vundle manage Vundle, required
 Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
+Plugin 'vim-scripts/a.vim'
 
 call vundle#end()            " required
 
@@ -30,9 +31,52 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
  
-" == Powerline configuration ==
+
+" == Powerline configuration =========================================
 "
 " Always show statusline
 set laststatus=2
+
+
+" == Vim configuration ===============================================
+" 
+" this is needed, so we can use any char for listchars
+scriptencoding utf-8
+set encoding=utf-8
+
+" covert tabs to 4 spaces
+"set shiftwidth=4
+"set tabstop=4
+set nu
+set nowrap
+set nostartofline
 set t_Co=256
+
+" Change invisible characters
+set listchars=tab:»\ ,trail:·,eol:↲
+
+" Clear selection with ,/
+nmap <silent> ,/ :let @/=""<CR>
+
+" Default yank register is same as system clipboard
+set clipboard=unnamedplus
+
+" Unbind usual keys
+" h
+map <silent><Left>  <Esc>
+" j
+map <silent><Down>  <Esc>
+" k
+map <silent><Up>    <Esc>
+" l
+map <silent><Right> <Esc>
+" Ctrl D
+map <silent><PageDown>  <Esc>
+" Ctrl U
+map <silent><PageUp>    <Esc>
+" 0
+map <silent><Home>      <Esc>
+" $
+map <silent><End>       <Esc>
+
 
