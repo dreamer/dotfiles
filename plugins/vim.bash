@@ -9,11 +9,14 @@ install_vimrc ()
 	if [ -d ~/.vim ] ; then
 		echo "+ .vim is created already"
 	else
-		git clone \
-			https://github.com/VundleVim/Vundle.vim.git \
-			~/.vim/bundle/Vundle.vim
-
-		echo "+ .vim created, Vundle installed"
+		if git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim ; then
+			echo "+ .vim created, Vundle installed"
+		else
+			echo "- .vim creation failed"
+			rmdir ~/.vim/bundle
+			rmdir ~/.vim
+			return 1
+		fi
 	fi
 
 	local object="$(pwd)/dotfiles/vimrc"
