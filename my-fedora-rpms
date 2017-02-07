@@ -54,6 +54,7 @@ gimp
 vlc
 rdesktop
 gcc-c++
+clang
 bash-completion
 screen
 #thewidgetfactory
