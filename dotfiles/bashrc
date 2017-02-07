@@ -38,3 +38,8 @@ alias yum='dnf'
 alias vim='gvim -v' # normal vim does not have X clipboard support enabled
 alias ocaml='rlwrap ocaml' # stupid ocaml
 alias ps='ps --forest'
+
+# Rust env, this should be in bash_profile:
+if [ -f ~/.cargo/env ]; then
+	. ~/.cargo/env
+fi
