@@ -138,6 +138,8 @@ protobuf-lite-static
 protobuf-lite-devel
 protobuf-vim
 
+expat-devel
+
 fuse-encfs
 
 # pretty, pretty
