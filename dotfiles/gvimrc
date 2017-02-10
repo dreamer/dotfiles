@@ -1,11 +1,8 @@
 " get rid of bells and visualbells!
 set vb t_vb= 
 
-
 " so cool…
-" colorscheme murphy
-colorscheme mustang2
-
+colorscheme mustang
 
 " neat font
 set guifont=inconsolata\ 11

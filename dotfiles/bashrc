@@ -35,7 +35,7 @@ alias ll='ls -l'
 alias la='ls -A'
 alias ssh='ssh -X'
 alias yum='dnf'
-alias vim='gvim -v' # normal vim does not have X clipboard support enabled
+alias vim='vimx' # normal vim does not have X clipboard support enabled
 alias ocaml='rlwrap ocaml' # stupid ocaml
 alias ps='ps --forest'
 

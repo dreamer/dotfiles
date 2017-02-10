@@ -14,6 +14,8 @@ Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
 Plugin 'vim-scripts/a.vim'
+Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'dreamer/mustang-vim'
 
 call vundle#end()            " required
 
@@ -30,7 +32,7 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
- 
+
 
 " == Powerline configuration =========================================
 "
@@ -39,7 +41,7 @@ set laststatus=2
 
 
 " == Vim configuration ===============================================
-" 
+"
 " this is needed, so we can use any char for listchars
 scriptencoding utf-8
 set encoding=utf-8
@@ -79,4 +81,12 @@ map <silent><Home>      <Esc>
 " $
 map <silent><End>       <Esc>
 
+colorscheme mustang
+
+" this hack fixes background rendering for mustang
+if &term =~ '256color'
+  " disable Background Color Erase (BCE) so that color schemes
+  " render properly when inside 256-color tmux and GNU screen.
+  set t_ut=
+endif
 
