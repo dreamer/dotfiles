@@ -90,3 +90,6 @@ if &term =~ '256color'
   set t_ut=
 endif
 
+" set syntax for .gitconfig .git/config gerrit's project.config etc…
+autocmd BufRead,BufNewFile *config set filetype=dosini
+
