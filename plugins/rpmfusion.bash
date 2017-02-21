@@ -17,7 +17,7 @@ install_rpmfusion ()
 		return 0
 	fi
 
-	if sudo dnf install -y $pkg_1 $pkg_2 2> /dev/null ; then
+	if sudo dnf install -y $url_1 $url_2 2> /dev/null ; then
 		echo "+ rpmfusion installed"
 	else
 		echo "- rpmfusion not installed"
