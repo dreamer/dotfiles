@@ -22,3 +22,5 @@ link_dropbox	~/Dropbox/Documents		~/Documents
 link_dropbox	~/Dropbox/Pictures		~/Pictures
 link_dropbox	~/Dropbox/Public		~/Public
 link_dropbox	~/Dropbox/home/Templates	~/Templates
+
+change_gnome_defaults
