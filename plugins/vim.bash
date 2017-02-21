@@ -2,6 +2,11 @@
 
 install_vimrc ()
 {
+	if ! which vim >/dev/null ; then
+		echo "- Vundle can't be installed (vim missing)"
+		return 1
+	fi
+
 	# before vundle configuration, you need to
 	# check if github can be reached!
 	# otherwise vundle will fail to download plugins
@@ -40,6 +45,10 @@ install_vimrc ()
 		echo "- .vimrc linking failed"
 		return 1
 	fi
+
+	# TODO: create plugin specific vimrc file
+	# use it here with -u <vimrcfile>
+	# and :source it from main .vimrc
 
 	vim +PluginInstall +qall
 	echo "+ Vundle plugins installed"
