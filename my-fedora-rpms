@@ -141,6 +141,11 @@ protobuf-vim
 expat-devel
 
 fuse-encfs
+fuse-exfat
+
+openconnect
+NetworkManager-openconnect
+NetworkManager-openconnect-gnome
 
 # pretty, pretty
 # gtk-murrine-engine	# otherwise cool skins won't work well
