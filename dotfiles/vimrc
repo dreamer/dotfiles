@@ -93,3 +93,6 @@ endif
 " set syntax for .gitconfig .git/config gerrit's project.config etc…
 autocmd BufRead,BufNewFile *config set filetype=dosini
 
+" it's not exactly an ini file, but close enough
+autocmd BufRead,BufNewFile *.toml set filetype=dosini
+
