@@ -1,0 +1,45 @@
+#!/bin/env bash
+
+home_music=~/Music
+kipp_music=/run/user/$(id -u)/gvfs/smb-share\:server\=kipp\,share\=music/
+
+if [ ! -d $home_music ] ; then
+	echo "~/Music dir does not exist."
+	exit 1
+fi
+
+if [ ! -d $kipp_music ] ; then
+	echo "KIPP music dir is not mounted."
+	exit 1
+fi
+
+pull ()
+{
+	local src="$kipp_music/"
+	local dst="$home_music/"
+	rsync \
+		--archive \
+		--update \
+		--chmod=D2755,F664 \
+		--progress \
+		--human-readable \
+		"$src" "$dst"
+	echo
+}
+
+push ()
+{
+	local src="$home_music/"
+	local dst="$kipp_music/"
+	rsync \
+		--archive \
+		--update \
+		--no-perms \
+		--progress \
+		--human-readable \
+		"$src" "$dst"
+	echo
+}
+
+pull
+push
