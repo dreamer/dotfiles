@@ -80,6 +80,7 @@ clementine
 ppl-swiprolog # used to be borked, now works again
 gnome-boxes
 transmission-gtk
+gtk-doc
 
 gstreamer-plugins-good
 gstreamer-plugins-good-extras
