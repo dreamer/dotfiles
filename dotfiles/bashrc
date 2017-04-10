@@ -27,7 +27,15 @@ export SVN_EDITOR=vim
 # == stuff that came from Arch ============================
 
 alias ls='ls --color=always'
-PS1='[\u@\h \W]\$ '
+
+git_branch ()
+{
+	local branch=$(git rev-parse --abbrev-ref HEAD 2> /dev/null)
+	if [ -n "$branch" ]; then
+		echo -n "  $branch"
+	fi
+}
+PS1='[\u@\h \W$(git_branch)]\$ '
 
 # == Fedora has this by default, yet noone else do ========
 alias cd..='cd ..'
