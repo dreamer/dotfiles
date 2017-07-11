@@ -1,0 +1,35 @@
+[profiles]
+list=['2b7c4080-0ddd-46c5-8f23-563fd3ba789d', '7e73ee0c-d8bc-4ae2-8eb7-b56e44549c35']
+default='7e73ee0c-d8bc-4ae2-8eb7-b56e44549c35'
+
+[profiles/7e73ee0c-d8bc-4ae2-8eb7-b56e44549c35]
+foreground-color='#A7A7A7'
+visible-name='Dream'
+dim-color-set=false
+palette=['#000000', '#CC0000', '#4D9A05', '#C3A000', '#3464A3', '#754F7B', '#05979A', '#D3D6CF', '#545652', '#EF2828', '#89E234', '#FBE84F', '#729ECF', '#AC7EA8', '#34E2E2', '#EDEDEB']
+badge-color-set=false
+default-size-rows=65
+default-size-columns=240
+use-system-font=false
+cursor-colors-set=false
+highlight-colors-set=false
+use-theme-colors=false
+bold-color-set=false
+font='Terminus 14'
+terminal-bell='icon'
+terminal-title=' ${id}: ${title} [${columns}×${rows}]'
+background-color='#000000000000'
+background-transparency-percent=4
+dim-transparency-percent=10
+
+[profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d]
+visible-name='Default'
+
+[/]
+copy-on-select=true
+terminal-title-style='small'
+window-state=132
+theme-variant='dark'
+control-scroll-zoom=true
+app-title='${appName}: ${sessionName} ${sessionNumber}'
+window-style='borderless'
