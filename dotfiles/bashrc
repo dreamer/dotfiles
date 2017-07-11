@@ -32,7 +32,8 @@ git_branch ()
 {
 	local branch=$(git rev-parse --abbrev-ref HEAD 2> /dev/null)
 	if [ -n "$branch" ]; then
-		echo -n "  $branch"
+		echo -n "  "
+		echo -n $branch | sed -e "s|\(.\)[^/]*/|\1/|g"
 	fi
 }
 PS1='[\u@\h \W$(git_branch)]\$ '
