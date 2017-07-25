@@ -14,6 +14,7 @@
 
 [alias]
 	lsd = log --graph --decorate --pretty=oneline --abbrev-commit
+	root = rev-parse --show-toplevel
 
 [sendemail]
 	smtpserver = smtp.gmail.com
