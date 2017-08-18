@@ -1,0 +1,32 @@
+#!/bin/bash
+
+# Wrapper around git-format-patch to generate patches appropriate for
+# submission to git mailing list (git@vger.kernel.org).
+
+# TODO: add --base=<commit>
+# TODO: copy cover title from previous set
+
+readonly BRANCH_NAME=$(git rev-parse --abbrev-ref HEAD)
+readonly TOPIC=$(basename "$BRANCH_NAME" | sed -e 's|\(.*\)-.*$|\1|')
+readonly ITER=$(basename "$BRANCH_NAME" | sed -e 's|.*-\(.*\)$|\1|')
+
+optionally_reroll () {
+	if [ "$ITER" -gt 1 ] ; then
+		echo "--reroll-count=$ITER"
+	fi
+}
+
+list_reviewers () {
+	echo git@vger.kernel.org
+	./contrib/contacts/git-contacts "$TOPIC-$ITER"/*
+}
+
+git format-patch \
+	--cover-letter \
+	--find-renames \
+	--thread=shallow \
+	"$(optionally_reroll)" \
+	-o "$TOPIC-$ITER" \
+	"$@"
+
+list_reviewers | tee "$TOPIC-$ITER/mails"
