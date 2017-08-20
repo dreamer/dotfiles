@@ -13,6 +13,8 @@ readonly ITER=$(basename "$BRANCH_NAME" | sed -e 's|.*-\(.*\)$|\1|')
 optionally_reroll () {
 	if [ "$ITER" -gt 1 ] ; then
 		echo "--reroll-count=$ITER"
+	else
+		echo ""
 	fi
 }
 
@@ -25,8 +27,8 @@ git format-patch \
 	--cover-letter \
 	--find-renames \
 	--thread=shallow \
-	"$(optionally_reroll)" \
 	-o "$TOPIC-$ITER" \
+	$(optionally_reroll) \
 	"$@"
 
 list_reviewers | tee "$TOPIC-$ITER/mails"
