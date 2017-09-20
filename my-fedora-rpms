@@ -16,6 +16,7 @@ levien-inconsolata-fonts
 meld
 vim-X11 # aka gvim
 vim-enhanced # why not simply vim?!
+neovim
 # powerline # mispackaged, let's use through Vundle for now
 git
 gitk

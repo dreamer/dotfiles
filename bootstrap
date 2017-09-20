@@ -5,6 +5,7 @@ for p in plugins/*.bash ; do source $p ; done
 install_rpmfusion
 install_packages my-fedora-rpms
 install_vimrc
+install_nvimrc
 
 force_link_file	$(pwd)/dotfiles/bashrc		~/.bashrc
 force_link_file	$(pwd)/dotfiles/bash_profile	~/.bash_profile
