@@ -9,6 +9,9 @@ Plug 'vim-scripts/a.vim'
 " My own colour scheme
 Plug 'dreamer/mustang-vim'
 
+" Rust file detection and syntax highlight
+Plug 'rust-lang/rust.vim'
+
 " Language Server Protocol support
 Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
 
@@ -26,6 +29,7 @@ call plug#end()
 set hidden
 
 let g:LanguageClient_serverCommands = {
+    \ 'rust': ['rustup', 'run', 'nightly', 'rls'],
     \ 'python': ['pyls'],
     \ }
 

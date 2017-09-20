@@ -17,3 +17,7 @@ export PATH
 if [ -f ~/.$(hostname)_profile ]; then
 	. ~/.$(hostname)_profile
 fi
+
+# This env variable is used by racer
+
+export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src
