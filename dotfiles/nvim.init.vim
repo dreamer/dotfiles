@@ -12,6 +12,10 @@ Plug 'dreamer/mustang-vim'
 " Rust file detection and syntax highlight
 Plug 'rust-lang/rust.vim'
 
+" Whitespace highlight done right
+" includes handy commands :StripWhitespace and :ToggleWhitespace
+Plug 'ntpeters/vim-better-whitespace'
+
 " Language Server Protocol support
 Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
 
@@ -59,13 +63,14 @@ nmap <silent> ,/ :let @/=""<CR>
 " Enable line numbers
 set number
 
+" No wrapping by default
+set nowrap
+
 " Use my colorscheme
 colorscheme mustang
 
 " Show trailing whitespace; does not work with colorcolumn
 hi ExtraWhitespace ctermbg=red guibg=red
-hi ColorColumn guibg=#2d2d2d ctermbg=233
-au BufWinEnter * let w:m1=matchadd('ExtraWhitespace', '\s\+$', -1, -1)
 
 " Default yank register is same as system clipboard
 set clipboard=unnamedplus
@@ -88,3 +93,14 @@ map <silent> <Home> <Esc>
 " $
 map <silent> <End> <Esc>
 
+
+" == Filetype-specific options ================================================
+
+" set syntax for .gitconfig .git/config gerrit's project.config etc…
+autocmd BufRead,BufNewFile *config set filetype=dosini
+
+" it's not exactly an ini file, but close enough
+autocmd BufRead,BufNewFile *.toml set filetype=dosini
+
+" pretend to be normal editor for markdown files
+autocmd BufRead,BufNewFile *.md set wrap linebreak nolist
