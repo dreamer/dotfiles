@@ -16,6 +16,9 @@ Plug 'rust-lang/rust.vim'
 " includes handy commands :StripWhitespace and :ToggleWhitespace
 Plug 'ntpeters/vim-better-whitespace'
 
+" Gblame et consortes
+Plug 'tpope/vim-fugitive'
+
 " Language Server Protocol support
 Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
 
