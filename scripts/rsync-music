@@ -26,6 +26,7 @@ pull ()
 		--chmod=D2755,F664 \
 		--progress \
 		--human-readable \
+		--prune-empty-dirs \
 		"$src" "$dst"
 	echo
 }
@@ -40,6 +41,7 @@ push ()
 		--no-perms \
 		--progress \
 		--human-readable \
+		--prune-empty-dirs \
 		"$src" "$dst"
 	echo
 }
