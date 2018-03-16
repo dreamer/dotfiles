@@ -1,14 +1,17 @@
 #!/bin/env bash
 
-home_music=~/Music
-kipp_music=/run/user/$(id -u)/gvfs/smb-share\:server\=kipp\,share\=music/
+readonly home_music="$HOME/Music"
 
-if [ ! -d $home_music ] ; then
+# shellcheck disable=SC1001
+readonly kipp_music=/run/user/$(id -u)/gvfs/smb-share\:server\=kipp\,share\=music/
+
+if [ ! -d "$home_music" ] ; then
+	# shellcheck disable=SC2088
 	echo "~/Music dir does not exist."
 	exit 1
 fi
 
-if [ ! -d $kipp_music ] ; then
+if [ ! -d "$kipp_music" ] ; then
 	echo "KIPP music dir is not mounted."
 	exit 1
 fi
