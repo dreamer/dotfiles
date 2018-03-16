@@ -3,7 +3,7 @@
 #
 # nice icons: http://mokaproject.com/faba-icon-theme/
 # faba, moka
- 
+
 kernel-devel
 usbmon
 
@@ -78,6 +78,7 @@ texlive-latex
 texinfo
 xdotool
 clementine
+lollypop
 #pdftk
 ppl-swiprolog # used to be borked, now works again
 gnome-boxes
