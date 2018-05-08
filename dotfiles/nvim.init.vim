@@ -38,9 +38,10 @@ set hidden
 let g:LanguageClient_serverCommands = {
     \ 'rust': ['rustup', 'run', 'nightly', 'rls'],
     \ 'python': ['pyls'],
-    \ 'c': ['clangd'],
-    \ 'cpp': ['clangd'],
     \ }
+
+"     'c': ['clangd'],
+"     'cpp': ['clangd'],
 
 " Enable deoplete code completion
 let g:deoplete#enable_at_startup = 1
