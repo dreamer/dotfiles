@@ -44,7 +44,7 @@ gnome-terminal-nautilus
 comix
 kodi # formerly xbmc
 unrar
-xchat
+hexchat
 dosbox
 wine
 winetricks
@@ -96,6 +96,7 @@ gstreamer-ffmpeg
 gstreamer1-libav
 
 # useful stuff
+kid3
 
 lshw # list hardware
 mediawriter # formerly liveusb-creator
@@ -132,7 +133,7 @@ SDL_ttf-devel
 gettext
 zlib
 lua
-python2-django
+#python2-django
 protobuf
 protobuf-static
 protobuf-devel
