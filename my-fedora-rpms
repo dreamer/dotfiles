@@ -57,13 +57,14 @@ vlc
 rdesktop
 gcc-c++
 clang
+clang-tools-extra
 bash-completion
 screen
 #thewidgetfactory
 scrot
 hunspell-pl
 hunspell-fr
-gnome-tweak-tool
+gnome-tweaks
 libreoffice-writer
 libreoffice-calc
 gparted
@@ -112,7 +113,6 @@ cvs
 subversion
 subversion-tools
 nemiver
-scons
 connect-proxy
 fpc # Free Pascal, oh how I love thee
 
