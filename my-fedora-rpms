@@ -13,6 +13,7 @@ icu # unicode tools
 terminus-fonts
 terminus-fonts-console
 levien-inconsolata-fonts
+gtypist
 meld
 vim-X11 # aka gvim
 vim-enhanced # why not simply vim?!
@@ -136,6 +137,7 @@ gettext
 zlib
 lua
 #python2-django
+pylint
 protobuf
 protobuf-static
 protobuf-devel
