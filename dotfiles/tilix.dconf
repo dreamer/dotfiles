@@ -1,35 +1,35 @@
 [profiles]
-list=['2b7c4080-0ddd-46c5-8f23-563fd3ba789d', '7e73ee0c-d8bc-4ae2-8eb7-b56e44549c35']
-default='7e73ee0c-d8bc-4ae2-8eb7-b56e44549c35'
+list=['2b7c4080-0ddd-46c5-8f23-563fd3ba789d', 'aab60e02-18fc-49f4-ae70-76e98f632a6c']
+default='aab60e02-18fc-49f4-ae70-76e98f632a6c'
 
-[profiles/7e73ee0c-d8bc-4ae2-8eb7-b56e44549c35]
+[profiles/aab60e02-18fc-49f4-ae70-76e98f632a6c]
 foreground-color='#A7A7A7'
-visible-name='Dream'
-dim-color-set=false
-palette=['#000000', '#CC0000', '#4D9A05', '#C3A000', '#3464A3', '#754F7B', '#05979A', '#D3D6CF', '#545652', '#EF2828', '#89E234', '#FBE84F', '#729ECF', '#AC7EA8', '#34E2E2', '#EDEDEB']
+visible-name='My profile'
+palette=['#000000', '#AA0000', '#00AA00', '#AA5400', '#0000AA', '#AA00AA', '#00AAAA', '#AAAAAA', '#545454', '#FF5454', '#54FF54', '#FFFF54', '#5454FF', '#FF54FF', '#54FFFF', '#FFFFFF']
+badge-color='#AC7EA8'
 badge-color-set=false
-default-size-rows=65
-default-size-columns=240
 use-system-font=false
 cursor-colors-set=false
 highlight-colors-set=false
 use-theme-colors=false
 bold-color-set=false
-font='Terminus 14'
+font='Terminus 12'
 terminal-bell='icon'
 terminal-title=' ${id}: ${title} [${columns}×${rows}]'
 background-color='#000000000000'
-background-transparency-percent=4
-dim-transparency-percent=10
+background-transparency-percent=3
+dim-transparency-percent=29
 
 [profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d]
 visible-name='Default'
 
 [/]
+quake-specific-monitor=0
 copy-on-select=true
 terminal-title-style='small'
-window-state=132
+window-state=43908
 theme-variant='dark'
 control-scroll-zoom=true
-app-title='${appName}: ${sessionName} ${sessionNumber}'
+enable-wide-handle=false
+window-save-state=true
 window-style='borderless'
