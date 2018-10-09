@@ -25,5 +25,6 @@ link_dropbox	~/Dropbox/Public		~/Public
 link_dropbox	~/Dropbox/home/Templates	~/Templates
 
 change_gnome_defaults
+change_tilix_defaults
 
 download_fonts
