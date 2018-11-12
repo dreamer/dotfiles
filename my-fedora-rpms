@@ -4,6 +4,9 @@
 # nice icons: http://mokaproject.com/faba-icon-theme/
 # faba, moka
 
+redhat-lsb-core
+hwinfo
+
 kernel-devel
 usbmon
 
@@ -20,6 +23,7 @@ neovim
 # powerline # mispackaged, let's use through Vundle for now
 git
 gitk
+git-lfs
 eog
 youtube-dl
 #gnome-shell-extension-weather
@@ -117,6 +121,7 @@ subversion-tools
 nemiver
 connect-proxy
 fpc # Free Pascal, oh how I love thee
+ShellCheck
 
 # packaging
 rpm-build
