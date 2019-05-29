@@ -24,7 +24,8 @@ Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
 
 " Completion integration with deoplete.
 " Optional, recommended by LanguageClient-neovim.
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" FIXME no idea...
+" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " Initialize plugin system
 call plug#end()
