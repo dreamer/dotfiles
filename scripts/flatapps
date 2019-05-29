@@ -1,0 +1,58 @@
+#!/bin/env bash
+
+lowercase ()
+{
+	tr '[:upper:]' '[:lower:]'
+}
+
+flatpak_apps ()
+{
+	flatpak list --app --columns=application | tail -n +1
+}
+
+action ()
+{
+	while read -r app_id ; do
+		case $1 in
+			list) printf "%-20s %s\n" "$(convert "$app_id")" "$app_id" ;;
+			install) create_script "$(convert "$app_id")" "$app_id" ;;
+			remove) remove_script "$(convert "$app_id")" ;;
+		esac
+	done
+}
+
+convert ()
+{
+	flatpak_id=$1
+	name=$(basename "$(echo "$1" | sed 's/\./\//g')" | lowercase)
+	case $flatpak_id in
+		com.visualstudio.code.oss) echo code-oss ;;
+		*) echo "$name" ;;
+	esac
+}
+
+remove_script ()
+{
+	script="$HOME/.local/bin/$1"
+	echo "rm -f \"$script\"" 1>&2
+	rm -f "$script"
+}
+
+create_script ()
+{
+	script="$HOME/.local/bin/$1"
+	if [ -f "$script" ] ; then
+		echo "skipping $script (file exists already)" 1>&2
+	else
+		echo "installing $script" 1>&2
+		echo "#!/bin/env bash" > "$script"
+		echo "flatpak run $2 \"\$@\"" >> "$script"
+		chmod +x "$script"
+	fi
+}
+
+case $1 in
+	-i|--install) flatpak_apps | action install ;;
+	-r|--remove) flatpak_apps | action remove ;;
+	*) flatpak_apps | action list ;;
+esac

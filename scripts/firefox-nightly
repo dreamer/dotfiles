@@ -1,0 +1,28 @@
+#!/bin/bash
+
+download () {
+	pushd ~/Downloads/
+	curl -L --output firefox-nightly.tar.bz2 \
+		"https://download.mozilla.org/?product=firefox-nightly-latest-l10n-ssl&os=linux64&lang=en-GB"
+	echo "Unpacking…"
+	tar xjf firefox-nightly.tar.bz2
+	mkdir -p ~/opt
+	mv firefox ~/opt/firefox-nightly
+	popd
+}
+
+run () {
+	pushd ~/opt/firefox-nightly
+	echo ./firefox -P nightly "$@"
+	./firefox -P nightly "$@"
+	popd
+}
+
+main () {
+	if [[ ! -d ~/opt/firefox-nightly ]] ; then
+		download
+	fi
+	run "$@"
+}
+
+main "$@"
