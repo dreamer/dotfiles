@@ -10,6 +10,7 @@ hwinfo
 kernel-devel
 usbmon
 
+ffsend  # Firefox Send terminal client
 hdparm
 irssi
 icu # unicode tools
