@@ -22,6 +22,7 @@ meld
 vim-X11 # aka gvim
 vim-enhanced # why not simply vim?!
 neovim
+python3-neovim
 powerline
 git
 gitk

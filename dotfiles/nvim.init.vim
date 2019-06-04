@@ -19,12 +19,12 @@ Plug 'ntpeters/vim-better-whitespace'
 " Gblame et consortes
 Plug 'tpope/vim-fugitive'
 
-" Language Server Protocol support
-" Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
+" ALE (Asynchronous Lint Engine + Language Sever Protocol support)
+Plug 'w0rp/ale'
 
 " Completion integration with deoplete.
-" Optional, recommended by LanguageClient-neovim.
-" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" Optional, recommended by ALE
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " Initialize plugin system
 call plug#end()
@@ -32,22 +32,23 @@ call plug#end()
 
 " == LSP and related plugins =================================================
 
-" Required for operations modifying multiple buffers like rename.
-set hidden
+" verify with :ALEInfo
+" for additional language servers: https://github.com/w0rp/ale/blob/master/supported-tools.md
+"
+let b:ale_linters = {
+\	'python': ['pyls', 'pylint'],
+\ }
 
 " let g:LanguageClient_serverCommands = {
-"     \ 'python': ['pyls'],
-"     \ }
-
+"     'python': ['pyls'],
 "     'rust': ['rustup', 'run', 'nightly', 'rls'],
 "     'c': ['clangd'],
 "     'cpp': ['clangd'],
 
 " Enable deoplete code completion
-" FIXME let g:deoplete#enable_at_startup = 1
-
-" Automatically start language servers.
-" let g:LanguageClient_autoStart = 1
+" Use ALE as source completion
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#sources = {'_': ['ale']}
 
 " Always show diagnostics/linter column
 set signcolumn=yes
