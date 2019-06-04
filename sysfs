@@ -1,0 +1,8 @@
+# for powerline; developers simply close all bug reports
+# default is 8K; investigate why powerline is so inotify-hungry
+sysctl fs.inotify.max_user_watches=16384  
+
+# supposedly resolves excessive trashing in low memory situation
+# not proven yet
+sysctl vm.swappiness=100
+sysctl vm.watermark_scale_factor=200

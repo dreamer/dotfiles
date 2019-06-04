@@ -1,5 +1,4 @@
 " == Vundle configuration ============================================
-
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -10,9 +9,8 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim' " let Vundle manage Vundle, required
-Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
-Plugin 'tpope/vim-fugitive'
-Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-fugitive'   " is in fedora repo nowadays
+Plugin 'scrooloose/nerdtree'  " is in fedora repo nowadays
 Plugin 'vim-scripts/a.vim'
 " Plugin 'ntpeters/vim-better-whitespace' " broken atm
 Plugin 'dreamer/mustang-vim'

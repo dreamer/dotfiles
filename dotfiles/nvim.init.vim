@@ -20,11 +20,10 @@ Plug 'ntpeters/vim-better-whitespace'
 Plug 'tpope/vim-fugitive'
 
 " Language Server Protocol support
-Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
+" Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
 
 " Completion integration with deoplete.
 " Optional, recommended by LanguageClient-neovim.
-" FIXME no idea...
 " Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " Initialize plugin system
@@ -36,25 +35,25 @@ call plug#end()
 " Required for operations modifying multiple buffers like rename.
 set hidden
 
-let g:LanguageClient_serverCommands = {
-    \ 'rust': ['rustup', 'run', 'nightly', 'rls'],
-    \ 'python': ['pyls'],
-    \ }
+" let g:LanguageClient_serverCommands = {
+"     \ 'python': ['pyls'],
+"     \ }
 
+"     'rust': ['rustup', 'run', 'nightly', 'rls'],
 "     'c': ['clangd'],
 "     'cpp': ['clangd'],
 
 " Enable deoplete code completion
-let g:deoplete#enable_at_startup = 1
+" FIXME let g:deoplete#enable_at_startup = 1
 
 " Automatically start language servers.
-let g:LanguageClient_autoStart = 1
+" let g:LanguageClient_autoStart = 1
 
 " Always show diagnostics/linter column
 set signcolumn=yes
 
 " Jump to definition
-nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
+" FIXME nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
 
 
 " == Neovim configuration ====================================================
