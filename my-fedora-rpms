@@ -10,6 +10,8 @@ hwinfo
 kernel-devel
 usbmon
 
+discord
+
 ffsend  # Firefox Send terminal client
 hdparm
 irssi
