@@ -1,0 +1,3 @@
+#!/bin/bash
+echo 'Select the window, that is offending you…'
+xprop -f _GTK_THEME_VARIANT 8u -set _GTK_THEME_VARIANT dark
