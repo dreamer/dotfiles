@@ -96,6 +96,7 @@ transmission-gtk
 gtk-doc
 tokei
 cloc
+exa
 
 gstreamer-plugins-good
 gstreamer-plugins-good-extras
