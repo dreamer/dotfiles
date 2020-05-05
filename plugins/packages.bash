@@ -17,7 +17,7 @@ install_packages ()
 		return 0
 	fi
 
-	if sudo dnf install -y $(list_file $1) 2> /dev/null ; then
+	if sudo dnf install --skip-broken -y $(list_file $1) ; then
 		echo "+ $1 packages installed"
 		rpm -q $(list_file $1) | grep -e "is not installed"
 		return 0
