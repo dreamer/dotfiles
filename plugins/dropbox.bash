@@ -1,5 +1,18 @@
 #!/bin/bash
 
+check_dropbox_status () {
+
+	if ! which dropbox 2> /dev/null ; then
+		echo "- dropbox is not installed"
+		exit 1
+	fi
+
+	dropbox status
+
+	echo "! You need to install and start dropbox manually"
+	echo "! Because of their shitty limits and installer"
+}
+
 link_dropbox () {
 
 	local object=$1
