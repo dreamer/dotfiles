@@ -18,6 +18,7 @@ irssi
 icu # unicode tools
 terminus-fonts
 terminus-fonts-console
+cascadia-code-fonts
 levien-inconsolata-fonts
 gtypist
 meld

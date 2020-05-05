@@ -1,6 +1,20 @@
+[/]
+quake-specific-monitor=0
+copy-on-select=true
+terminal-title-style='small'
+window-state=43908
+theme-variant='dark'
+control-scroll-zoom=true
+enable-wide-handle=false
+window-save-state=true
+window-style='borderless'
+
 [profiles]
-list=['2b7c4080-0ddd-46c5-8f23-563fd3ba789d', 'aab60e02-18fc-49f4-ae70-76e98f632a6c']
 default='aab60e02-18fc-49f4-ae70-76e98f632a6c'
+list=['2b7c4080-0ddd-46c5-8f23-563fd3ba789d', 'aab60e02-18fc-49f4-ae70-76e98f632a6c']
+
+[profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d]
+visible-name='Default'
 
 [profiles/aab60e02-18fc-49f4-ae70-76e98f632a6c]
 foreground-color='#A7A7A7'
@@ -13,23 +27,11 @@ cursor-colors-set=false
 highlight-colors-set=false
 use-theme-colors=false
 bold-color-set=false
-font='Terminus 12'
+font='Cascadia Mono PL 12'
 terminal-bell='icon'
 terminal-title=' ${id}: ${title} [${columns}×${rows}]'
 background-color='#000000000000'
 background-transparency-percent=3
 dim-transparency-percent=29
 
-[profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d]
-visible-name='Default'
 
-[/]
-quake-specific-monitor=0
-copy-on-select=true
-terminal-title-style='small'
-window-state=43908
-theme-variant='dark'
-control-scroll-zoom=true
-enable-wide-handle=false
-window-save-state=true
-window-style='borderless'
