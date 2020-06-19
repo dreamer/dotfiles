@@ -1,0 +1,7 @@
+#!/bin/bash
+
+for p in plugins/*.bash ; do source $p ; done
+
+install_rpmfusion
+install_packages my-fedora-rpms
+

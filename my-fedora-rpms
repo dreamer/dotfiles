@@ -18,6 +18,7 @@ irssi
 icu # unicode tools
 terminus-fonts
 terminus-fonts-console
+cascadia-code-fonts
 levien-inconsolata-fonts
 gtypist
 meld
@@ -38,23 +39,22 @@ gnuplot
 units
 indent
 telnet
-python2-matplotlib
 figlet
 pv              # progress bar for pipes, yay!
 mailx
 man-pages
-alacarte
+# alacarte
 epiphany
 gnome-subtitles
-empathy
+# empathy
 tilix # better terminator
-terminator
+# terminator
 gnome-terminal-nautilus
-comix
+#comix
 kodi # formerly xbmc
 unrar
 hexchat
-dosbox
+# dosbox
 wine
 winetricks
 # fusion-icon
@@ -87,7 +87,7 @@ cmake
 texlive-latex
 texinfo
 xdotool
-clementine
+# clementine
 lollypop
 #pdftk
 ppl-swiprolog # used to be borked, now works again
@@ -98,10 +98,10 @@ tokei
 cloc
 exa
 
-gstreamer-plugins-good
-gstreamer-plugins-good-extras
+#gstreamer-plugins-good
+#gstreamer-plugins-good-extras
 gstreamer-plugins-bad
-gstreamer-plugins-bad-free
+#gstreamer-plugins-bad-free
 gstreamer-plugins-bad-nonfree
 gstreamer-plugins-ugly
 gstreamer-ffmpeg
@@ -138,15 +138,14 @@ fedpkg
 
 # devel packages
 boost-devel
-SDL-devel
-SDL_image-devel
-SDL_mixer-devel
-SDL_net-devel
-SDL_ttf-devel
+# SDL-devel
+# SDL_image-devel
+# SDL_mixer-devel
+# SDL_net-devel
+# SDL_ttf-devel
 gettext
 zlib
 lua
-#python2-django
 pylint
 protobuf
 protobuf-static

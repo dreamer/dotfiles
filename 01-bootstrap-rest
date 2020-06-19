@@ -2,8 +2,6 @@
 
 for p in plugins/*.bash ; do source $p ; done
 
-install_rpmfusion
-install_packages my-fedora-rpms
 install_vimrc
 install_nvimrc
 
@@ -18,11 +16,6 @@ link_file	$(pwd)/dotfiles/gitignore	~/.gitignore
 for s in scripts/* ; do
 	link_file	$(pwd)/$s		~/bin/$(basename $s)
 done
-
-link_dropbox	~/Dropbox/Documents		~/Documents
-link_dropbox	~/Dropbox/Pictures		~/Pictures
-link_dropbox	~/Dropbox/Public		~/Public
-link_dropbox	~/Dropbox/home/Templates	~/Templates
 
 change_gnome_defaults
 change_tilix_defaults
