@@ -46,9 +46,10 @@ alias dir='exa'
 alias dl='exa -l --git'
 alias ssh='ssh -X'
 alias yum='dnf'
-# alias vim='vimx' # normal vim does not have X clipboard support enabled
+alias vim='vimx' # normal vim does not have X clipboard support enabled
 alias ocaml='rlwrap ocaml' # stupid ocaml
 alias ps='ps --forest'
+alias cls='clear'
 
 # Rust env, this should be in bash_profile:
 if [ -f ~/.cargo/env ]; then
