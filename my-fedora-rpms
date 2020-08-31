@@ -48,6 +48,7 @@ epiphany
 gnome-subtitles
 # empathy
 tilix # better terminator
+tilix-nautilus
 # terminator
 gnome-terminal-nautilus
 #comix
