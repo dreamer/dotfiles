@@ -1,66 +1,55 @@
-" == Plug configuration ======================================================
-
+" == Plug configuration ================================================
+"
 " Specify directory for plugins
 call plug#begin('~/.local/share/nvim/plugged')
 
-" Guess header for open C/C++ file
-Plug 'vim-scripts/a.vim'
+" Colour schemes
+"Plug 'dreamer/mustang-vim'
+"Plug 'joshdick/onedark.vim'
+Plug 'cocopon/iceberg.vim'
 
-" My own colour scheme
-Plug 'dreamer/mustang-vim'
+" Built-in LSP support
+Plug 'neovim/nvim-lsp'
 
-" Rust file detection and syntax highlight
-Plug 'rust-lang/rust.vim'
-
-" Whitespace highlight done right
-" includes handy commands :StripWhitespace and :ToggleWhitespace
-Plug 'ntpeters/vim-better-whitespace'
+" vim-airline
+Plug 'vim-airline/vim-airline'
+"Plug 'vim-airline/vim-airline-themes'
 
 " Gblame et consortes
 Plug 'tpope/vim-fugitive'
 
-" ALE (Asynchronous Lint Engine + Language Sever Protocol support)
-Plug 'w0rp/ale'
-
-" Completion integration with deoplete.
-" Optional, recommended by ALE
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-
 " Initialize plugin system
 call plug#end()
 
+" == LSP configuration =================================================
+:lua << END
 
-" == LSP and related plugins =================================================
+require'nvim_lsp'.clangd.setup{}
+require'nvim_lsp'.rls.setup{}
 
-" verify with :ALEInfo
-" for additional language servers: https://github.com/w0rp/ale/blob/master/supported-tools.md
-"
-let b:ale_linters = {
-\	'python': ['pyls', 'pylint'],
-\ }
+END
 
-" let g:LanguageClient_serverCommands = {
-"     'python': ['pyls'],
-"     'rust': ['rustup', 'run', 'nightly', 'rls'],
-"     'c': ['clangd'],
-"     'cpp': ['clangd'],
+nnoremap <silent> gd    <cmd>lua vim.lsp.buf.declaration()<CR>
+nnoremap <silent> <c-]> <cmd>lua vim.lsp.buf.definition()<CR>
+nnoremap <silent> K     <cmd>lua vim.lsp.buf.hover()<CR>
+nnoremap <silent> gD    <cmd>lua vim.lsp.buf.implementation()<CR>
+nnoremap <silent> <c-h> <cmd>lua vim.lsp.buf.signature_help()<CR>
+nnoremap <silent> 1gD   <cmd>lua vim.lsp.buf.type_definition()<CR>
+nnoremap <silent> gr    <cmd>lua vim.lsp.buf.references()<CR>
+nnoremap <silent> g0    <cmd>lua vim.lsp.buf.document_symbol()<CR>
+nnoremap <silent> gW    <cmd>lua vim.lsp.buf.workspace_symbol()<CR>
 
-" Enable deoplete code completion
-" Use ALE as source completion
-let g:deoplete#enable_at_startup = 1
-let g:deoplete#sources = {'_': ['ale']}
+" == clang-format =====================================================
 
-" Always show diagnostics/linter column
-set signcolumn=yes
+" Integrate clang-format tool
+map <C-K> :py3f ~/bin/clang-format.py<cr>
+imap <C-K> <c-o>:py3f ~/bin/clang-format.py<cr>
 
-" Jump to definition
-" FIXME nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
-
-
-" == Neovim configuration ====================================================
+" == Neovim configuration ==============================================
 
 " Change invisible characters
 set listchars=tab:»\ ,trail:·,eol:↲
+set list
 
 " Clear selection with ,/
 nmap <silent> ,/ :let @/=""<CR>
@@ -72,7 +61,7 @@ set number
 set nowrap
 
 " Use my colorscheme
-colorscheme mustang
+colorscheme iceberg
 
 " Show trailing whitespace; does not work with colorcolumn
 hi ExtraWhitespace ctermbg=red guibg=red
@@ -80,32 +69,9 @@ hi ExtraWhitespace ctermbg=red guibg=red
 " Default yank register is same as system clipboard
 set clipboard=unnamedplus
 
-" Unbind usual keys
-" h
-map <silent> <Left> <Esc>
-" j
-map <silent> <Down> <Esc>
-" k
-map <silent> <Up> <Esc>
-" l
-map <silent> <Right> <Esc>
-" Ctrl D
-map <silent> <PageDown> <Esc>
-" Ctrl U
-map <silent> <PageUp> <Esc>
-" 0
-map <silent> <Home> <Esc>
-" $
-map <silent> <End> <Esc>
+" == vim-airline =======================================================
 
-
-" == Filetype-specific options ================================================
-
-" set syntax for .gitconfig .git/config gerrit's project.config etc…
-autocmd BufRead,BufNewFile *config set filetype=dosini
-
-" it's not exactly an ini file, but close enough
-autocmd BufRead,BufNewFile *.toml set filetype=dosini
-
-" pretend to be normal editor for markdown files
-autocmd BufRead,BufNewFile *.md set wrap linebreak nolist
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#whitespace#checks = [ 'indent', 'trailing' ]
+let g:airline#extensions#whitespace#mixed_indent_algo = 2

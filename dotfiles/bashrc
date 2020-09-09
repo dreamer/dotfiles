@@ -22,7 +22,10 @@ fi
 
 alias grep="grep --color"
 alias egrep="egrep --color"
+
 export SVN_EDITOR=vim
+
+export EDITOR=vim
 
 # == stuff that came from Arch ============================
 
