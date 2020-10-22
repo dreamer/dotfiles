@@ -5,6 +5,6 @@ for p in plugins/*.bash ; do source $p ; done
 check_dropbox_status
 
 link_dropbox	~/Dropbox/Documents		~/Documents
-link_dropbox	~/Dropbox/Pictures		~/Pictures
+#link_dropbox	~/Dropbox/Pictures		~/Pictures
 link_dropbox	~/Dropbox/Public		~/Public
 link_dropbox	~/Dropbox/home/Templates	~/Templates
