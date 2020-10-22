@@ -10,9 +10,8 @@ hwinfo
 kernel-devel
 usbmon
 
-discord
 
-ffsend  # Firefox Send terminal client
+#ffsend  # Firefox Send terminal client
 hdparm
 irssi
 icu # unicode tools
@@ -71,7 +70,7 @@ clang-tools-extra
 bash-completion
 screen
 #thewidgetfactory
-scrot
+#scrot
 hunspell-pl
 hunspell-fr
 gnome-tweaks
@@ -101,11 +100,11 @@ exa
 
 #gstreamer-plugins-good
 #gstreamer-plugins-good-extras
-gstreamer-plugins-bad
+#gstreamer-plugins-bad
 #gstreamer-plugins-bad-free
-gstreamer-plugins-bad-nonfree
-gstreamer-plugins-ugly
-gstreamer-ffmpeg
+#gstreamer-plugins-bad-nonfree
+#gstreamer-plugins-ugly
+#gstreamer-ffmpeg
 # gstreamer maintainers are insane...
 gstreamer1-libav
 
@@ -174,7 +173,7 @@ NetworkManager-openconnect-gnome
 arc-theme # in repos since F25, hurray!
 
 # fonts
-freetype-freeworld
+#freetype-freeworld #?
 
 # latex
 texlive
@@ -184,6 +183,9 @@ texlive-polski
 
 hplip-gui
 
+# Gaming apps
+steam
+discord
 
 # I am not sure any more, seems like official dropbox installation is
 # missing something...
