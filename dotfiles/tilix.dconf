@@ -1,37 +1,45 @@
 [/]
-quake-specific-monitor=0
-copy-on-select=true
-terminal-title-style='small'
-window-state=43908
-theme-variant='dark'
 control-scroll-zoom=true
+copy-on-select=true
 enable-wide-handle=false
+quake-specific-monitor=0
+terminal-title-style='small'
+theme-variant='dark'
+warn-vte-config-issue=false
 window-save-state=true
+window-state=43908
 window-style='borderless'
+
+[keybindings]
+app-new-session='disabled'
+session-add-down='<Primary><Shift>t'
+session-add-right='<Primary>t'
 
 [profiles]
 default='aab60e02-18fc-49f4-ae70-76e98f632a6c'
 list=['2b7c4080-0ddd-46c5-8f23-563fd3ba789d', 'aab60e02-18fc-49f4-ae70-76e98f632a6c']
 
 [profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d]
+login-shell=true
 visible-name='Default'
 
 [profiles/aab60e02-18fc-49f4-ae70-76e98f632a6c]
-foreground-color='#A7A7A7'
-visible-name='My profile'
-palette=['#000000', '#AA0000', '#00AA00', '#AA5400', '#0000AA', '#AA00AA', '#00AAAA', '#AAAAAA', '#545454', '#FF5454', '#54FF54', '#FFFF54', '#5454FF', '#FF54FF', '#54FFFF', '#FFFFFF']
-badge-color='#AC7EA8'
-badge-color-set=false
-use-system-font=false
-cursor-colors-set=false
-highlight-colors-set=false
-use-theme-colors=false
-bold-color-set=false
-font='Cascadia Mono PL 12'
-terminal-bell='icon'
-terminal-title=' ${id}: ${title} [${columns}×${rows}]'
 background-color='#000000000000'
 background-transparency-percent=3
+badge-color='#AC7EA8'
+badge-color-set=false
+bold-color-set=false
+cursor-colors-set=false
+default-size-columns=256
+default-size-rows=100
 dim-transparency-percent=29
-
-
+font='Cascadia Code 12'
+foreground-color='#A7A7A7'
+highlight-colors-set=false
+login-shell=true
+palette=['#000000', '#AA0000', '#00AA00', '#AA5400', '#0000AA', '#AA00AA', '#00AAAA', '#AAAAAA', '#545454', '#FF5454', '#54FF54', '#FFFF54', '#5454FF', '#FF54FF', '#54FFFF', '#FFFFFF']
+terminal-bell='icon'
+terminal-title=' ${id}: ${title} [${columns}×${rows}]'
+use-system-font=false
+use-theme-colors=false
+visible-name='My profile'
