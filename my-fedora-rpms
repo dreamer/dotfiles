@@ -29,6 +29,7 @@ powerline
 git
 gitk
 git-lfs
+git-svn
 eog
 youtube-dl
 #gnome-shell-extension-weather
@@ -159,8 +160,8 @@ protobuf-vim
 expat-devel
 
 fuse-encfs
-fuse-exfat
-exfat-utils
+# fuse-exfat   # not needed any more
+# exfat-utils  # not needed any more
 
 openconnect
 NetworkManager-openconnect
