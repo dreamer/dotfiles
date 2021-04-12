@@ -27,5 +27,8 @@
 [log]
 	decorate = true
 
-[http "https://proxy@github.com/"]
-	proxy = https://10.144.1.10:8080/
+#[http "https://proxy@github.com/"]
+#	proxy = https://10.144.1.10:8080/
+
+[init]
+	defaultBranch = master
