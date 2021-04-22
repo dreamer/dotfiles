@@ -1,0 +1,2 @@
+# /etc/modprobe.d/xbox_bt.conf
+options bluetooth disable_ertm=1
