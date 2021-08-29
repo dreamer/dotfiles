@@ -5,15 +5,13 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 " Colour schemes
 "Plug 'dreamer/mustang-vim'
-"Plug 'joshdick/onedark.vim'
 Plug 'cocopon/iceberg.vim'
 
 " Built-in LSP support
-Plug 'neovim/nvim-lsp'
+Plug 'neovim/nvim-lspconfig'
 
 " vim-airline
 Plug 'vim-airline/vim-airline'
-"Plug 'vim-airline/vim-airline-themes'
 
 " Gblame et consortes
 Plug 'tpope/vim-fugitive'
@@ -23,10 +21,8 @@ call plug#end()
 
 " == LSP configuration =================================================
 :lua << END
-
-require'nvim_lsp'.clangd.setup{}
-require'nvim_lsp'.rls.setup{}
-
+require'lspconfig'.clangd.setup{}
+require'lspconfig'.rls.setup{}
 END
 
 nnoremap <silent> gd    <cmd>lua vim.lsp.buf.declaration()<CR>
