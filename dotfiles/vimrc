@@ -9,7 +9,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim' " let Vundle manage Vundle, required
-Plugin 'tpope/vim-fugitive'   " is in fedora repo nowadays
+" Plugin 'tpope/vim-fugitive'   " is in fedora repo nowadays
 Plugin 'scrooloose/nerdtree'  " is in fedora repo nowadays
 Plugin 'vim-scripts/a.vim'
 " Plugin 'ntpeters/vim-better-whitespace' " broken atm

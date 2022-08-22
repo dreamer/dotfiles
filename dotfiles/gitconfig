@@ -32,3 +32,5 @@
 
 [init]
 	defaultBranch = master
+[tag]
+	sort = v:refname

@@ -26,6 +26,7 @@ call plug#end()
 
 require'nvim_lsp'.clangd.setup{}
 require'nvim_lsp'.rls.setup{}
+require'nvim_lsp'.pyls.setup{}
 
 END
 

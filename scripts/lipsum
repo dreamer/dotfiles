@@ -49,7 +49,7 @@ def main():
     else:
         lipsum_text = '\n'.join( paragraphs )
     if not options.clipboard:
-        print lipsum_text,   
+        print(lipsum_text) # TODO
     else:
         # this works, but needs pygtk package
         import gtk
