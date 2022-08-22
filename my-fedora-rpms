@@ -19,6 +19,7 @@ terminus-fonts
 terminus-fonts-console
 cascadia-code-fonts
 levien-inconsolata-fonts
+fira-code-fonts
 gtypist
 meld
 vim-X11 # aka gvim
