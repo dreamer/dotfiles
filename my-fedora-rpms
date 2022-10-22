@@ -81,7 +81,8 @@ libreoffice-calc
 gparted
 wget
 p7zip
-xorg-x11-apps # xkill!
+xeyes
+xkill
 binutils
 autoconf
 automake
