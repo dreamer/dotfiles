@@ -4,6 +4,7 @@ for p in plugins/*.bash ; do source $p ; done
 
 install_vimrc
 install_nvimrc
+install_rust_toolchain
 
 force_link_file	$(pwd)/dotfiles/bashrc		~/.bashrc
 force_link_file	$(pwd)/dotfiles/bash_profile	~/.bash_profile

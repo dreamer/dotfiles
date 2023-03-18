@@ -56,7 +56,7 @@ alias cls='clear'
 
 # Rust env, this should be in bash_profile:
 if [ -f ~/.cargo/env ]; then
-	. ~/.cargo/env
+	source "$HOME/.cargo/env"
 fi
 
 # Gtk VTE reads additional infro from vte.sh
@@ -64,4 +64,3 @@ fi
 if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
         source /etc/profile.d/vte.sh
 fi
-source "$HOME/.cargo/env"
