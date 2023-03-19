@@ -21,6 +21,16 @@ install_rust_toolchain ()
 	if which rustc 2>/dev/null ; then
 		echo "+ rustc installed"
 	else
-		echo "+ rustc not installed"
+		echo "- rustc not installed"
+	fi
+
+	if which rustup 2>/dev/null ; then
+		mkdir -p ~/.local/share/bash-completion/completions
+
+		rustup completions bash > ~/.local/share/bash-completion/completions/rustup
+		echo "+ rustup bash completions installed"
+
+		rustup completions bash cargo > ~/.local/share/bash-completion/completions/cargo
+		echo "+ cargo bash completions installed"
 	fi
 }
