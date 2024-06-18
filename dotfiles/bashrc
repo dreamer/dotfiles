@@ -53,6 +53,7 @@ alias vim='vimx' # normal vim does not have X clipboard support enabled
 alias ocaml='rlwrap ocaml' # stupid ocaml
 alias ps='ps --forest'
 alias cls='clear'
+alias mdp='marker -p'
 
 # Rust env, this should be in bash_profile:
 if [ -f ~/.cargo/env ]; then
