@@ -1,0 +1,5 @@
+#!/bin/bash
+
+chmod +x
+echo "~/opt/Pianoteq 8 STAGE/x86-64bit/Pianoteq 8 STAGE"
+
